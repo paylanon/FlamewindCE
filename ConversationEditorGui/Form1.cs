@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using Editor;
 using ConversationEditorGui.Properties;
+using DarkModeForms;
 
 namespace ConversationEditorGui
 {
@@ -43,9 +44,17 @@ namespace ConversationEditorGui
 
         private ProgramSettings programSettings;
 
+	    private DarkModeCS DarkMode = null;
+
         public Form1()
         {
             InitializeComponent();
+	    
+	        DarkMode = new DarkModeCS(this);
+	        DarkMode.ColorizeIcons = false;
+	        // DarkMode.RoundedPanels = true;
+	        DarkMode.OScolors.Accent = Color.FromArgb(40, Color.LightSteelBlue);
+	    
             mainDropdownMenus = new MainMenuStripClass(this);
             mainToolbar = new MainToolbar(this);
             this.Controls.Add(this.mainToolbar);

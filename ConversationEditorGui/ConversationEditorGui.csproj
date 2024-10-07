@@ -10,7 +10,7 @@
     <RootNamespace>ConversationEditorGui</RootNamespace>
     <AssemblyName>ConversationEditorGui</AssemblyName>
     <ApplicationIcon>ConversationEditor.ico</ApplicationIcon>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -67,6 +69,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ConversationNode.cs" />
+    <Compile Include="DarkModeForms\DarkModeCS.cs" />
+    <Compile Include="DarkModeForms\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DarkModeForms\FlatProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DarkModeForms\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DarkModeForms\Messenger.cs" />
     <Compile Include="DeleteNodeDialog.cs">
       <SubType>Form</SubType>
     </Compile>

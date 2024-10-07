@@ -87,7 +87,7 @@ namespace ConversationEditorGui
             this.Controls.Add(this.closeTabButton);
             this.Controls.Add(this.mainDisplayPanel);
             this.Name = "Form1";
-            this.Text = "Conversation Editor";
+            this.Text = "Limbo FlamewindCE";
             this.Icon = System.Drawing.Icon.FromHandle(global::ConversationEditorGui.Properties.Resources.MainIcon.GetHicon());
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mainDisplayPanel.ResumeLayout(false);

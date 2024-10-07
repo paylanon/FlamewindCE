@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Editor;
+using DarkModeForms;
+using System.Media;
 
 namespace ConversationEditorGui
 {
@@ -26,10 +28,13 @@ namespace ConversationEditorGui
         private List<ConversationLinkLabel> myLinks = new List<ConversationLinkLabel>();
 
         private List<Label> myComments = new List<Label>();
-        
+
+        private DarkModeCS DarkMode = null;
+
         public TestConversation()
         {
             InitializeComponent();
+            DarkMode = new DarkModeCS(this);
         }
 
         public void SetConversation(TreeConversation conversation)
@@ -159,7 +164,7 @@ namespace ConversationEditorGui
             {
                 tag.Text = "";
                 this.ResumeLayout();
-                MessageBox.Show("Conversation Has Ended.");
+                Messenger.MessageBox("Conversation Has Ended.", "", MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                 this.Hide();
             }
             else

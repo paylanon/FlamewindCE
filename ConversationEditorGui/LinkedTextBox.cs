@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,6 +32,7 @@ namespace ConversationEditorGui
             ContextMenu = null;
             ContextMenuOpening += ContextMenu_Opening;
             KeyDown += ShortcutKeys;
+            Background = System.Windows.Media.Brushes.Tan;
         }
 
         #region Events

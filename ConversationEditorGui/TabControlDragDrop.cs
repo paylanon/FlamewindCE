@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using DarkModeForms;
 
 namespace ConversationEditorGui
 {
-    public class TabControlDragDrop : TabControl
+    public class TabControlDragDrop : FlatTabControl
     {
         private TabPage GetPageByTab(Point pt)
         {

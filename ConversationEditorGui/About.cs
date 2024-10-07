@@ -5,14 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using DarkModeForms;
 
 namespace ConversationEditorGui
 {
     public partial class About : Form
     {
+        private DarkModeCS DarkMode = null;
         public About()
         {
             InitializeComponent();
+            DarkMode = new DarkModeCS(this);
             newLink.Links.Add(0,newLink.Text.Length, "https://neverwintervault.org/project/nwnee/other/tool/flamewind-conversation-editor-20");
             HelpLink.Links.Add(0, HelpLink.Text.Length, "http://www.flamewind.com");
             this.HelpText.Text = "This program and the associated Neverwinter\nNights 2 plugin were originally created by Cassandra Gelvin,\nan amateur programmer in southern California.";
